@@ -1,0 +1,22 @@
+server:
+  port: 9090
+spring:
+  application:
+    name: spring-security-oauth2.0
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/easybankdev/protocol/openid-connect/certs
+
+logging:
+  level:
+    org:
+      springframework:
+        security:
+          web:
+            FilterChainProxy: DEBUG
+
+#keycloak: username : Oauth password: Oauth@1234
+#How to run Keycloak in local : Goto /bin kc.bat start-dev
+#Follow urls: To setup keycloak and run it in local : https://www.keycloak.org/getting-started/getting-started-zip
